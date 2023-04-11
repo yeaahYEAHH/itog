@@ -1,0 +1,22 @@
+{
+  "name": "planeticket",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yeaahYEAHH/ticket.git"
+  },
+  "author": "me",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yeaahYEAHH/ticket/issues"
+  },
+  "homepage": "https://github.com/yeaahYEAHH/ticket#readme",
+  "dependencies": {
+    "electron": "^23.0.0"
+  }
+}
