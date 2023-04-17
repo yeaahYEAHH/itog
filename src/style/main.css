@@ -10,7 +10,10 @@ html,  body{
 }
 
 :root{
-    --backgroungclr: gray;
+    --winbar: #808080;
+    --winclose: #ff0000;
+    --winbtnhover: #9c9999;
+    --white: #ffffff;
 }
 
 .win{
@@ -20,7 +23,26 @@ html,  body{
 
 .win > header{
     display: grid;
-    grid-template-columns: 5% 20% 25% 25% 25% 5%;
-    height: 40px;
-    background-color: var(--backgroungclr);
+    grid-template-columns: 40px 1fr 40px 40px 40px;
+    height: 30px;
+    background-color: var(--winbar);
+}
+
+
+.win > header > *{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: .3s ease-in-out;
+}
+
+.win > header > div:nth-child(3):hover,
+.win > header > div:nth-child(4):hover{
+   background-color: var(--winbtnhover); 
+}
+
+.btn-close:hover{
+    background-color: var(--winclose);
+    color: var(--white);
 }

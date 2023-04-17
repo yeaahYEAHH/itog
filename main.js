@@ -1,31 +1,33 @@
 const path = require('path'),
     url = require('url'),
-    {app, BrowserWindow} = require('electron');
-
-let win;
+    {app, BrowserWindow,ipcMain} = require('electron');
 
 function createWindow(){
-    win = new BrowserWindow({
+    const win = new BrowserWindow({
         width: 700, 
         height: 500,
-        title: "leax",
+        frame: false,
         icon: __dirname + "img/favicon.svg",
         webPreferences: {
             isSecureContext: true,
-
+            preload: path.join(__dirname + '/src/js/preload.js')
         }
     });
 
-    app.webContents.openDevTools();
-    win.loadFile(__dirname + "./src/index.html")
-}
+    win.webContents.openDevTools()
+    win.loadFile('./src/index.html')
 
-// ipcMain.handle('some-name', async (event, someArgument) => {
-//     const result = await doSomeWork(someArgument)
-//     return result
-//   })
+    ipcMain.on('min', () =>{
+        win.minimize();
+    })
+
+    ipcMain.on('quit', () =>{
+        app.quit() 
+    })
+
+    
+}
 app.whenReady().then(createWindow)
 
-app.on('window-all-closed', () => {
-    app.quit();
-})
+
+
