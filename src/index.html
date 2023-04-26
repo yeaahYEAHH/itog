@@ -9,19 +9,37 @@
     <link rel="stylesheet" href="./style/main.css">
     
     <script src="./js/render.js"></script>
-    <title>sdf</title>
+    <title>PlaneTicket</title>
 </head>
 <body>
     <section class="win">
         <header>
-            <div class="icon"></div>
-            <div class="title"></div>
-            <div class="btn-min"><i class="fa-solid fa-minus"></i></i></i></div>
-            <div class="btn-max"><i class="fa-regular fa-window-maximize"></i></i></div>
-            <div class="btn-close"><i class="fa-solid fa-xmark"></i></div>
+            <div class="win__icon"><img src="./img/icon.svg" alt="logo" ></div>
+            <div class="win__title"></div>
+            <div class="win__btn-min"><i class="fa-solid fa-minus"></i></i></i></div>
+            <div class="win__btn-max"><i id="winbtn" class="fa-regular fa-window-maximize"></i></i></div>
+            <div class="win__btn-close"><i class="fa-solid fa-xmark"></i></div>
         </header>
     </section>
 
-    
+    <div class="login">
+        <div class="login__form form">
+            <form id="form__register">
+                <input type="text" placeholder="имя" />
+                <input type="text" placeholder="фамилия" />
+                <input type="text" placeholder="отчество" />
+                <input type="password" placeholder="пароль" />
+                <input type="text" placeholder="почта" />
+                <button>Создать</button>
+                <p class="message">Уже есть аккаунт? <a class="login__message" href="#">Войти</a></p>
+            </form>
+            <form id="form__login" class="active">
+                <input type="text" placeholder="почта" />
+                <input type="password" placeholder="пароль" />
+                <button>Войти</button>
+                <p class="message">Не зарегистрированны? <a class="register__message" href="#">Создать аккаунт</a></p>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

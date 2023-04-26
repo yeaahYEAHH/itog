@@ -24,10 +24,9 @@ html,  body{
 .win > header{
     display: grid;
     grid-template-columns: 40px 1fr 40px 40px 40px;
-    height: 30px;
+    height: 40px;
     background-color: var(--winbar);
 }
-
 
 .win > header > *{
     display: flex;
@@ -42,7 +41,84 @@ html,  body{
    background-color: var(--winbtnhover); 
 }
 
-.btn-close:hover{
+.win__title{
+    -webkit-app-region: drag;
+}
+
+.win__icon > *{
+    max-width: 30px;
+    max-height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--white);
+}
+
+.win__btn-close:hover{
     background-color: var(--winclose);
     color: var(--white);
 }
+
+.login {
+    width: 360px;
+    padding: 8% 0 0;
+    margin: auto;
+}
+
+#form__register,
+#form__login {
+    display: none;
+}
+
+.form {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.form input {
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.form button {
+    text-transform: uppercase;
+    outline: 0;
+    background: #4CAF50;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}
+
+.form button:hover,
+.form button:active,
+.form button:focus {
+    background: #43A047;
+}
+
+.form .message {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 12px;
+}
+
+.form .message a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+

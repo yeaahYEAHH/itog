@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/yeaahYEAHH/ticket#readme",
   "dependencies": {
-    "electron": "^23.0.0"
+    "electron": "^23.0.0",
+    "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "@electron-forge/plugin-auto-unpack-natives": "^6.1.1"
   }
 }
