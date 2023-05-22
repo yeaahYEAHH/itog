@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./style/solid.min.css">
     <link rel="stylesheet" href="./style/main.css">
     
-    <script src="./js/render.js"></script>
+
     <title>PlaneTicket</title>
 </head>
 <body>
@@ -22,24 +22,28 @@
         </header>
     </section>
 
-    <div class="login">
-        <div class="login__form form">
-            <form id="form__register">
-                <input type="text" placeholder="имя" />
-                <input type="text" placeholder="фамилия" />
-                <input type="text" placeholder="отчество" />
-                <input type="password" placeholder="пароль" />
-                <input type="text" placeholder="почта" />
-                <button>Создать</button>
-                <p class="message">Уже есть аккаунт? <a class="login__message" href="#">Войти</a></p>
-            </form>
-            <form id="form__login" class="active">
-                <input type="text" placeholder="почта" />
-                <input type="password" placeholder="пароль" />
-                <button>Войти</button>
-                <p class="message">Не зарегистрированны? <a class="register__message" href="#">Создать аккаунт</a></p>
-            </form>
+    <div class="wrapper">
+        <div class="login">
+            <div class="login__form form">
+                <form id="form__register">
+                    <input type="text" id="registerValue" placeholder="имя" />
+                    <input type="text" id="registerValue" placeholder="фамилия" />
+                    <input type="text" id="registerValue" placeholder="отчество" />
+                    <input type="password" id="registerValue" placeholder="пароль" />
+                    <input type="mail" id="registerValue" placeholder="почта" />
+                    <button id="create">Создать</button>
+                    <p class="message">Уже есть аккаунт? <a class="login__message" href="#">Войти</a></p>
+                </form>
+                <form id="form__login" class="active">
+                    <input type="text" id="login1" placeholder="почта" />
+                    <input type="password" id="password1" placeholder="пароль" />
+                    <button id="entry">Войти</button>
+                    <p class="message">Не зарегистрированны? <a class="register__message" href="#">Создать аккаунт</a></p>
+                </form>
+            </div>
         </div>
     </div>
+
+    <script src="./js/render.js"></script>
 </body>
 </html>

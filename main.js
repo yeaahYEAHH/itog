@@ -9,8 +9,6 @@ function createWindow(){
     const db = new sqlite3.Database('./src/database/database.db', sqlite3.OPEN_READWRITE, () => {
         console.log('Database succesful open');
     });
-    
-    db.run(`INSERT INTO user (login, pass) VALUES ('admin', '1111')`);
 
     const win = new BrowserWindow({
         width: 800, 
@@ -39,17 +37,11 @@ function createWindow(){
         win.unmaximize();
     })
 
-    ipcMain.on('create', () =>{
-        db.all('SELECT * FROM user', [], (err, rows) => {
-            if (err) {
-              console.error(err.message);
-            }
-            // Обрабатываем результат
-            console.log(rows);
-          });
+    ipcMain.on('create', (event, registerValue) =>{
+        
     })
 
-    ipcMain.on('check', (loginValue, passValue) =>{
+    ipcMain.on('check', (event, loginValue, passValue) =>{
         console.log(`${loginValue} ${passValue}`);
     })
 

@@ -4,6 +4,8 @@ contextBridge.exposeInMainWorld('electronAPI', {
     quit: () => ipcRenderer.send('quit'),
     min: () => ipcRenderer.send('min'),
     winMax: () => ipcRenderer.send('winMax'),
-    winMin: () => ipcRenderer.send('winMin') 
+    winMin: () => ipcRenderer.send('winMin'),
+    create: (registerValue) => ipcRenderer.send('create', registerValue),
+    check: (loginValue, passValue) => ipcRenderer.send('check', loginValue, passValue),
 })
 
